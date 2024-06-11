@@ -2,7 +2,7 @@ package com.gestion.diaria.gestionDiaria.entitys;
 
 import java.util.Date;
 
-
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -33,6 +33,7 @@ public  class GestionDiariaEntity {
 	private DiasSemanaEntity diaSemana;
 	
 	@Column(name = "FECHA")
+	//@JsonFormat(pattern="yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	private Date fecha;
 	

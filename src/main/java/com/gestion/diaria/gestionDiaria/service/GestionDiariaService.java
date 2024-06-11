@@ -19,6 +19,12 @@ public class GestionDiariaService {
 		return list;
 	}
 	
+	public List<GestionDiariaEntity> obtenerTareasPendientes(String fechaActual) {
+		List<GestionDiariaEntity> list = new ArrayList<>();
+		list = gestionDiariaRepository.findTareasPendientes(fechaActual);
+		return list;
+	}
+	
 	public List<GestionDiariaEntity> retornaSemanaActual() {
 		List<GestionDiariaEntity> list = new ArrayList<>();
 		list = gestionDiariaRepository.obtListSemanaActual();
