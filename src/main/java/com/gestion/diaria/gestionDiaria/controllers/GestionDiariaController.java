@@ -40,6 +40,16 @@ public class GestionDiariaController {
 	}
 	
 	
+	@GetMapping("/navegar-entre-semanas/{fechaInicio}/{fechaFin}")
+	public List<GestionDiariaEntity> navegarEntreSemanas(@PathVariable String fechaInicio, @PathVariable String fechaFin){
+		List<GestionDiariaEntity> list = new ArrayList<>();
+		list = gestionDiariaService.navegarEntreSemanas(fechaInicio,fechaFin);
+		System.out.println(list);
+		return list;
+	}
+	
+	
+	
 	@PostMapping("/crear-tarea")
 	public void crearTarea(@RequestBody GestionDiariaEntity gestionDiaria) {
 		gestionDiariaService.guardarTareas(gestionDiaria);

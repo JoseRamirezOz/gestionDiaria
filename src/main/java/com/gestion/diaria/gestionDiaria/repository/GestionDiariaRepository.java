@@ -18,4 +18,7 @@ public interface GestionDiariaRepository extends JpaRepository<GestionDiariaEnti
 	@Query(value = "SELECT * FROM gestion_diaria WHERE CUMPLIMIENTO = 0 AND FECHA < ?;", nativeQuery = true)
 	List<GestionDiariaEntity> findTareasPendientes(String fechaActual);
 	
+	@Query(value = "SELECT * FROM gestion_diaria WHERE FECHA BETWEEN ? AND ?", nativeQuery = true)
+	List<GestionDiariaEntity> findBetweenSemanas(String fechaInicio, String fechaFin);
+	
 }

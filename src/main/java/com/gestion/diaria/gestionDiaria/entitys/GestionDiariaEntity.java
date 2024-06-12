@@ -33,7 +33,7 @@ public  class GestionDiariaEntity {
 	private DiasSemanaEntity diaSemana;
 	
 	@Column(name = "FECHA")
-	//@JsonFormat(pattern="yyyy-MM-dd")
+	@JsonFormat(pattern="yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	private Date fecha;
 	

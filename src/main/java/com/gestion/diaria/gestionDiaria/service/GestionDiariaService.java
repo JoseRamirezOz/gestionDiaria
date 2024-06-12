@@ -25,6 +25,12 @@ public class GestionDiariaService {
 		return list;
 	}
 	
+	public List<GestionDiariaEntity> navegarEntreSemanas(String fechaInicio,String fechaFin) {
+		List<GestionDiariaEntity> list = new ArrayList<>();
+		list = gestionDiariaRepository.findBetweenSemanas(fechaInicio, fechaFin);
+		return list;
+	}
+	
 	public List<GestionDiariaEntity> retornaSemanaActual() {
 		List<GestionDiariaEntity> list = new ArrayList<>();
 		list = gestionDiariaRepository.obtListSemanaActual();
