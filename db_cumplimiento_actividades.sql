@@ -34,3 +34,16 @@ INSERT INTO `cumplimiento_actividades`.`gestion_diaria` (`DESC_ESTUDIE`, `DIA_SE
 
 INSERT INTO `cumplimiento_actividades`.`gestion_diaria` (`DESC_ESTUDIE`, `DIA_SEMANA`, `FECHA`, `CUMPLIMIENTO`
 ) VALUES ('Angular ', '7', '2024-06-09', '0');
+
+
+
+SELECT * FROM cumplimiento_actividades.gestion_diaria;
+SELECT * FROM cumplimiento_actividades.gestion_diaria WHERE FECHA BETWEEN  "2024-06-17" AND "2024-06-23";
+
+-- ENCONTRAR DUPLICADOS 
+SELECT  fecha, count(fecha)
+FROM cumplimiento_actividades.gestion_diaria
+GROUP BY fecha
+HAVING count(id) > 1;
+
+ALTER TABLE cumplimiento_actividades.gestion_diaria RENAME COLUMN fecha TO FECHA;

@@ -35,7 +35,6 @@ public class GestionDiariaController {
 	public List<GestionDiariaEntity> obtenerTareasPendientes(@PathVariable String fechaActual){
 		List<GestionDiariaEntity> list = new ArrayList<>();
 		list = gestionDiariaService.obtenerTareasPendientes(fechaActual);
-		System.out.println(list);
 		return list;
 	}
 	
@@ -44,7 +43,6 @@ public class GestionDiariaController {
 	public List<GestionDiariaEntity> navegarEntreSemanas(@PathVariable String fechaInicio, @PathVariable String fechaFin){
 		List<GestionDiariaEntity> list = new ArrayList<>();
 		list = gestionDiariaService.navegarEntreSemanas(fechaInicio,fechaFin);
-		System.out.println(list);
 		return list;
 	}
 	

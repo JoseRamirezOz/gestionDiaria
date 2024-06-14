@@ -34,7 +34,7 @@ public  class GestionDiariaEntity {
 	
 	@Column(name = "FECHA")
 	@JsonFormat(pattern="yyyy-MM-dd")
-	@Temporal(TemporalType.DATE)
+	//@Temporal(TemporalType.DATE)
 	private Date fecha;
 	
 	@Column(name = "CUMPLIMIENTO")
